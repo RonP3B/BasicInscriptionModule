@@ -1,0 +1,12 @@
+.footer {
+  margin-top: auto;
+  text-align: center;
+  background-color: $BannerColor;
+  padding: 0.2rem 0.3rem;
+
+  &__txt {
+    margin: 0;
+    text-transform: capitalize;
+    font-weight: 700;
+  }
+}

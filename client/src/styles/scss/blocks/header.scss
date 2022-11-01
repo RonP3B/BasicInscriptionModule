@@ -1,0 +1,14 @@
+.header {
+  background-color: $BannerColor;
+  padding: 0.75rem 0.55rem;
+
+  &__logo {
+    font-family: $LogoFont;
+    font-size: 1.7rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    margin: 0;
+    cursor: default;
+    user-select: none;
+  }
+}

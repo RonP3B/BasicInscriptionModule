@@ -1,0 +1,174 @@
+.main {
+  display: grid;
+  place-items: center;
+  min-height: calc(100vh - 64.7969px - 30.375px);
+  padding: 0.35rem;
+
+  &__breadcrumb {
+    ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+
+      @media screen and (max-width: 410px) {
+        display: grid;
+        row-gap: 0.25rem;
+        margin-bottom: 0.25rem;
+      }
+    }
+
+    li + li {
+      &::before {
+        content: "";
+        display: inline-block;
+        border: solid whitesmoke;
+        border-width: 0 2.5px 2.5px 0;
+        padding: 2.5px;
+        transform: rotate(-45deg);
+        margin-right: 0.4rem;
+      }
+    }
+
+    a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      text-decoration: none;
+      color: whitesmoke;
+      background-color: $BannerColor;
+      padding: 0.01rem 0.1rem;
+      border-radius: 5px;
+      margin-right: 0.2rem;
+      cursor: default;
+    }
+
+    a.active {
+      cursor: pointer;
+      transition-property: background-color, color;
+      transition-duration: 0.35s;
+      transition-timing-function: linear;
+
+      &:hover {
+        background-color: whitesmoke;
+        color: $BannerColor;
+      }
+    }
+  }
+
+  &__card {
+    box-shadow: $Shadow;
+    border: none;
+
+    &__header {
+      background-color: $BannerColor;
+      font-weight: 700;
+    }
+
+    &__body {
+      color: $BannerColor;
+      font-weight: 600;
+
+      &__form {
+        &__buttons {
+          display: flex;
+          justify-content: end;
+
+          button {
+            margin-left: 0.5rem;
+          }
+        }
+      }
+
+      &__info {
+        padding: 0.5rem 0.3125rem;
+        background-color: #ebe0f5;
+        border: 1px solid $BannerColor;
+        border-radius: 3px;
+
+        h3 {
+          text-align: center;
+          font-size: 1.05rem;
+          font-weight: 700;
+          text-decoration: underline;
+        }
+
+        h6,
+        p {
+          margin: 0;
+          padding: 0.2rem 0.0125rem;
+          font-size: 0.875rem;
+          border: 1px solid $BannerColor;
+          font-weight: 600;
+        }
+
+        h6 {
+          background-color: #b892ff;
+          min-width: 45%;
+          text-align: center;
+          color: whitesmoke;
+        }
+
+        p {
+          background-color: #eabffa;
+          width: 100%;
+          padding-left: 0.2rem;
+        }
+
+        .info-col {
+          background-color: #f7ebfd;
+          border: 1px solid #b892ff;
+          padding: 0.5rem 0.3125rem;
+        }
+
+        .info-col + .info-col {
+          border-left-width: 0;
+        }
+
+        .info-container {
+          display: flex;
+
+          @media screen and (max-width: 700px) {
+            flex-direction: column;
+          }
+        }
+      }
+
+      &__table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: center;
+
+        th {
+          padding: 0.175rem;
+        }
+
+        thead th {
+          background-color: #b892ff;
+          color: whitesmoke;
+          letter-spacing: 0.05rem;
+        }
+
+        tbody {
+          tr {
+            border-bottom: 2px solid #b892ff;
+            background-color: #f7ebfd;
+
+            &:nth-last-of-type(even) {
+              background-color: #d2b7e5;
+            }
+
+            td {
+              &:not(:first-child, :last-child) {
+                border-left: 2px solid #b892ff;
+                border-right: 2px solid #b892ff;
+              }
+            }
+          }
+
+          &:last-child {
+            border-bottom: 3px solid #b892ff;
+          }
+        }
+      }
+    }
+  }
+}

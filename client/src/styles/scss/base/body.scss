@@ -1,0 +1,8 @@
+body {
+  background: $GradientBackground;
+  background-blend-mode: multiply, multiply;
+  font-family: $MainFont;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,15 @@
+.modal {
+  &-header {
+    background-color: $BannerColor;
+    font-weight: 700;
+  }
+
+  &-body {
+    color: $BannerColor;
+    font-weight: 600;
+
+    p {
+      margin: 0;
+    }
+  }
+}

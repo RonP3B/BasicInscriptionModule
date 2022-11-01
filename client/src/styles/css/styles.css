@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Rubik+Wet+Paint&display=swap");
+body {
+  background: linear-gradient(45deg, #8baaaa 0%, #ae8b9c 100%);
+  background-blend-mode: multiply, multiply;
+  font-family: "Baloo 2", cursive;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+}
+
+.alert {
+  position: absolute;
+  top: 1rem;
+  right: 0.5rem;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  max-width: 309px;
+}
+
+.modal-header {
+  background-color: #871c84;
+  font-weight: 700;
+}
+.modal-body {
+  color: #871c84;
+  font-weight: 600;
+}
+.modal-body p {
+  margin: 0;
+}
+
+.header {
+  background-color: #871c84;
+  padding: 0.75rem 0.55rem;
+}
+.header__logo {
+  font-family: "Rubik Wet Paint", cursive;
+  font-size: 1.7rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  margin: 0;
+  cursor: default;
+  user-select: none;
+}
+
+.main {
+  display: grid;
+  place-items: center;
+  min-height: calc(100vh - 64.7969px - 30.375px);
+  padding: 0.35rem;
+}
+.main__breadcrumb ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+@media screen and (max-width: 410px) {
+  .main__breadcrumb ul {
+    display: grid;
+    row-gap: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+}
+.main__breadcrumb li + li::before {
+  content: "";
+  display: inline-block;
+  border: solid whitesmoke;
+  border-width: 0 2.5px 2.5px 0;
+  padding: 2.5px;
+  transform: rotate(-45deg);
+  margin-right: 0.4rem;
+}
+.main__breadcrumb a {
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: whitesmoke;
+  background-color: #871c84;
+  padding: 0.01rem 0.1rem;
+  border-radius: 5px;
+  margin-right: 0.2rem;
+  cursor: default;
+}
+.main__breadcrumb a.active {
+  cursor: pointer;
+  transition-property: background-color, color;
+  transition-duration: 0.35s;
+  transition-timing-function: linear;
+}
+.main__breadcrumb a.active:hover {
+  background-color: whitesmoke;
+  color: #871c84;
+}
+.main__card {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: none;
+}
+.main__card__header {
+  background-color: #871c84;
+  font-weight: 700;
+}
+.main__card__body {
+  color: #871c84;
+  font-weight: 600;
+}
+.main__card__body__form__buttons {
+  display: flex;
+  justify-content: end;
+}
+.main__card__body__form__buttons button {
+  margin-left: 0.5rem;
+}
+.main__card__body__info {
+  padding: 0.5rem 0.3125rem;
+  background-color: #ebe0f5;
+  border: 1px solid #871c84;
+  border-radius: 3px;
+}
+.main__card__body__info h3 {
+  text-align: center;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.main__card__body__info h6,
+.main__card__body__info p {
+  margin: 0;
+  padding: 0.2rem 0.0125rem;
+  font-size: 0.875rem;
+  border: 1px solid #871c84;
+  font-weight: 600;
+}
+.main__card__body__info h6 {
+  background-color: #b892ff;
+  min-width: 45%;
+  text-align: center;
+  color: whitesmoke;
+}
+.main__card__body__info p {
+  background-color: #eabffa;
+  width: 100%;
+  padding-left: 0.2rem;
+}
+.main__card__body__info .info-col {
+  background-color: #f7ebfd;
+  border: 1px solid #b892ff;
+  padding: 0.5rem 0.3125rem;
+}
+.main__card__body__info .info-col + .info-col {
+  border-left-width: 0;
+}
+.main__card__body__info .info-container {
+  display: flex;
+}
+@media screen and (max-width: 700px) {
+  .main__card__body__info .info-container {
+    flex-direction: column;
+  }
+}
+.main__card__body__table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+.main__card__body__table th {
+  padding: 0.175rem;
+}
+.main__card__body__table thead th {
+  background-color: #b892ff;
+  color: whitesmoke;
+  letter-spacing: 0.05rem;
+}
+.main__card__body__table tbody tr {
+  border-bottom: 2px solid #b892ff;
+  background-color: #f7ebfd;
+}
+.main__card__body__table tbody tr:nth-last-of-type(even) {
+  background-color: #d2b7e5;
+}
+.main__card__body__table tbody tr td:not(:first-child, :last-child) {
+  border-left: 2px solid #b892ff;
+  border-right: 2px solid #b892ff;
+}
+.main__card__body__table tbody:last-child {
+  border-bottom: 3px solid #b892ff;
+}
+
+.footer {
+  margin-top: auto;
+  text-align: center;
+  background-color: #871c84;
+  padding: 0.2rem 0.3rem;
+}
+.footer__txt {
+  margin: 0;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=styles.css.map */
